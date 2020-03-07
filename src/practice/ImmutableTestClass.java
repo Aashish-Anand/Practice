@@ -14,7 +14,7 @@ final class ImmutableClass {
 	}
 	
 	public static ImmutableClass MutableInstantiation(Integer abc, Integer bcd, Date date) {
-		val1=abc;
+		//val1=abc;
 		return new ImmutableClass(abc, bcd, date);
 	}
 	

@@ -12,15 +12,15 @@ class Dimensions<T> {
 		this.height = height;
 	}
 	
-	public <T> int Volume() {
-		return (int)length * (int)width * (int)height;
-	}
+//	public <T> int Volume() {
+//		return (int)length * (int)width * (int)height;
+//	}
 }
 public class Main1 {
 
 	public static void main(String[] args) {
 		Dimensions d = new Dimensions(1, 2, 3);
-		System.out.println(d.Volume());
+		//System.out.println(d.Volume());
 	}
 
 }
