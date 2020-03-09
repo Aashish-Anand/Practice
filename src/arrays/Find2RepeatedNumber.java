@@ -44,6 +44,8 @@ public class Find2RepeatedNumber {
 		
 		int a[] = {1,2,3,1,2,4};
 		int n = 4;
+		String abc = "abcde";
+		System.out.println(abc.substring(0,abc.length()-1));
 		print2Numbers(a,n);
 	}
 
