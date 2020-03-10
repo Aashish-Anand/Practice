@@ -15,10 +15,10 @@ public class QueenAttack2 {
         return false;
     }
 
-    private static int fillHorizontal(int n, Set<String> set, int x, int y) {
+    private static int checkHorizontal(int n, Set<String> set, int x, int y) {
 
         int count = 0;
-        //left
+        //East of Queen
         for (int i = y + 1; i < n; i++) {
             if (isSafe(set, n, x, i)) {
                 count++;
@@ -26,6 +26,8 @@ public class QueenAttack2 {
                 break;
             }
         }
+
+        //West of Queen
         for (int i = y - 1; i >= 0; i--) {
             if (isSafe(set, n, x, i)) {
                 count++;
@@ -36,10 +38,11 @@ public class QueenAttack2 {
         return count;
     }
 
-    private static int fillVertical(int n, Set<String> set, int x, int y) {
+    private static int checkVertical(int n, Set<String> set, int x, int y) {
 
         int count = 0;
-        //down
+
+        //South Of Queen
         for (int i = x + 1; i < n; i++) {
             if (isSafe(set, n, i, y)) {
                 count++;
@@ -47,7 +50,8 @@ public class QueenAttack2 {
                 break;
             }
         }
-        //up
+
+        //North of Queen
         for (int i = x - 1; i >= 0; i--) {
             if (isSafe(set, n, i, y)) {
                 count++;
@@ -58,59 +62,56 @@ public class QueenAttack2 {
         return count;
     }
 
-    private static int fillMainDiagonal(int n, Set<String> set, int x, int y) {
+    private static int checkDiagonal(int n, Set<String> set, int x, int y) {
 
         int count = 0;
 
-        //left - up
-        int i = x-1;
-        int j = y-1;
-        while(i >= 0 && j>=0) {
-            if(isSafe(set,n,i,j)) {
+        //North West of Queen
+        int i = x - 1;
+        int j = y - 1;
+        while (i >= 0 && j >= 0) {
+            if (isSafe(set, n, i, j)) {
                 count++;
-            }
-            else{
+            } else {
                 break;
             }
             i--;
             j--;
         }
 
-        //right down
-        i = x+1;
-        j = y+1;
-        while(i <n  && j<n) {
-            if(isSafe(set,n,i,j)) {
+        //South - East of Queen
+        i = x + 1;
+        j = y + 1;
+        while (i < n && j < n) {
+            if (isSafe(set, n, i, j)) {
                 count++;
-            }
-            else{
+            } else {
                 break;
             }
             i++;
             j++;
         }
 
-        //anti diagonal
-        //right up
-        i = x-1;
-        j = y+1;
-        while(i >=0 && j<n) {
-            if(isSafe(set,n,i,j)) {
+        //North East of queen
+        i = x - 1;
+        j = y + 1;
+        while (i >= 0 && j < n) {
+            if (isSafe(set, n, i, j)) {
                 count++;
-            }
-            else{
+            } else {
                 break;
             }
             i--;
             j++;
         }
-        i = x+1;
-        j = y-1;
-        while(i <n && j>=0) {
-            if(isSafe(set,n,i,j)) {
+
+        // South West of Queen
+        i = x + 1;
+        j = y - 1;
+        while (i < n && j >= 0) {
+            if (isSafe(set, n, i, j)) {
                 count++;
-            }
-            else{
+            } else {
                 break;
             }
             i++;
@@ -118,22 +119,22 @@ public class QueenAttack2 {
         }
         return count;
     }
-    private static int findMoves(int n ,int k ,int queen_x, int queen_y, int obstacles[][]) {
 
-        // Defining variables for all directions
+    static int findMoves(int n, int k, int queen_x, int queen_y, int[][] obstacles) {
         Set<String> set = new HashSet<String>();
-        for(int i = 0;i<obstacles.length;i++) {
-            set.add(Integer.toString(obstacles[i][0]-1) + Integer.toString(obstacles[i][1]-1));
+        for (int i = 0; i < obstacles.length; i++) {
+            set.add(Integer.toString(obstacles[i][0] - 1) + Integer.toString(obstacles[i][1] - 1));
         }
-        int count = fillHorizontal(n, set, queen_x - 1, queen_y - 1)
-                + fillVertical(n, set, queen_x - 1, queen_y - 1)
-                +fillMainDiagonal(n, set, queen_x - 1, queen_y - 1);
+        int count = checkHorizontal(n, set, queen_x - 1, queen_y - 1)
+                + checkVertical(n, set, queen_x - 1, queen_y - 1)
+                + checkDiagonal(n, set, queen_x - 1, queen_y - 1);
 
 
         return count;
     }
 
-    public static void main(String []args) {
+
+    public static void main(String[] args) {
         int n = 5;
         int k = 0;
         int queen_x = 4;
