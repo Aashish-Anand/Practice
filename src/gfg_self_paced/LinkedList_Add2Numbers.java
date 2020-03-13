@@ -71,18 +71,16 @@ public class LinkedList_Add2Numbers {
         return head1;
     }
     public static void main(String []args) {
-        LinkedList ll1 = new LinkedList(1);
-        LinkedList head1 = ll1;
-        ll1.insert(head1, 9);
-        ll1.insert(head1, 4);
-        ll1.insert(head1, 6);
+        LinkedList head1 = new LinkedList(1);
+        head1.insert(head1, 9);
+        head1.insert(head1, 4);
+        head1.insert(head1, 6);
 
-        LinkedList ll2 = new LinkedList(3);
-        LinkedList head2 = ll2;
-        ll2.insert(head2, 2);
-        ll2.insert(head2, 7);
+        LinkedList head2 = new LinkedList(3);
+        head2.insert(head2, 2);
+        head2.insert(head2, 7);
 
         head1 = add2Numbers(head1, head2);
-        ll1.print(head1);
+        head2.print(head1);
     }
 }
