@@ -2,18 +2,18 @@ package linkedList;
 
 public class LinkedList {
 
-	int data;
-	LinkedList next;
+	public int data;
+	public LinkedList next;
 	
-	LinkedList() {
+	public LinkedList() {
 		
 	}
-	LinkedList(int val) {
+	public LinkedList(int val) {
 		data = val;
 		next = null;
 	}
 	
-	void insert(LinkedList head, int val) {
+	public void insert(LinkedList head, int val) {
 		LinkedList curr = head;
 		
 		LinkedList newElement = new LinkedList(val);
@@ -24,7 +24,7 @@ public class LinkedList {
 		curr.next = newElement;
 	}
 	
-	void print(LinkedList head) {
+	public void print(LinkedList head) {
 		LinkedList curr = head;
 		while(curr!=null) {
 			System.out.print(curr.data + " ");
