@@ -48,6 +48,8 @@ public class OOPS {
 		System.out.println(abc);
 		int aabcd = abc;
 		System.out.println(aabcd);
+		String abs = "12345";
+		System.out.println(abs.indexOf("22"));
 	}
 
 }
