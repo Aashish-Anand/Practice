@@ -50,6 +50,16 @@ public class OOPS {
 		System.out.println(aabcd);
 		String abs = "12345";
 		System.out.println(abs.indexOf("22"));
+
+		Boolean val = true;
+
+		changeValue(val);
+		System.out.println(val);
+	}
+
+	private static void changeValue(Boolean val) {
+		val = false;
+		//return !prev;
 	}
 
 }
