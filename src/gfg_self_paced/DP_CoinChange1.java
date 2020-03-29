@@ -3,8 +3,7 @@ package gfg_self_paced;
 import java.util.Arrays;
 
 /*
-Question URL:https://practice.geeksforgeeks
-.org/problems/coin-change-minimum-number-of-coins/1/?track=SPC-DP&batchId=154
+Problem : https://www.geeksforgeeks.org/find-minimum-number-of-coins-that-make-a-change/
  */
 public class DP_CoinChange1 {
 
