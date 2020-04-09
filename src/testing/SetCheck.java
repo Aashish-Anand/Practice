@@ -1,11 +1,14 @@
 package testing;
 
 import java.util.HashSet;
+import java.util.List;
 
 public class SetCheck {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+
+
 		HashSet<Short> set = new HashSet<>();
 		
 		for(Short i = 0;i<100;i++) {
