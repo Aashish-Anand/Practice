@@ -2,6 +2,9 @@ package chefTeCode;
 
 import java.util.Scanner;
 
+/*
+Not completed
+ */
 public class MULTHREE {
     public static void main(String[] args) {
         new MULTHREE().run();
