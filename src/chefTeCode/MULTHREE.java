@@ -20,12 +20,61 @@ public class MULTHREE {
             int d1 = sc.nextInt();
             long sum = d0+d1;
 
-            for(int i = 0;i<k-2;i++) {
-                long newNum = sum%10;
-                sum+= newNum;
+            if(k == 2) {
+                if(sum % 3 == 0) {
+                    System.out.println("YES");
+                }else{
+                    System.out.println("NO");
+                }
+                continue;
             }
-            System.out.println(sum%3==0?"YES":"NO");
+            long lastDigit = sum%10;
 
+            sum = sum+lastDigit;
+            k = k-3;
+
+            while(k > 0) {
+
+                //System.out.println(lastDigit +" " + sum + " "+ k);
+                if(lastDigit==6){
+                    long quotient = k / 4;
+                    sum = sum + (quotient*20);
+
+                    k = k - (quotient*4);
+                    if(k == 0){
+                      //  break;
+                    }
+                    else if(k == 1) {  // 2
+                        sum += 2;
+                    }
+                    else if(k == 2) {  // 24
+                        sum += 6;
+                    }
+                    else if(k == 3){ // 248
+                        sum += 14;
+                    }
+                    k = 0;
+                    break;
+                }
+                else if(lastDigit == 0) {
+                    k = 0;
+                    break;
+                }
+                else {
+                    lastDigit = (lastDigit * 2) % 10;
+                    sum = sum + lastDigit;
+                    k--;
+                }
+
+            }
+
+            System.out.println(sum);
+            if(sum % 3== 0) {
+                System.out.println("YES");
+            }
+            else{
+                System.out.println("NO");
+            }
         }
     }
 }
