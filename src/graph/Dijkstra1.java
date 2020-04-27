@@ -29,11 +29,11 @@ public class Dijkstra1 {
 
         int distance[] = new int[noOfVerticex];
 
-        boolean set[] = new boolean[noOfVerticex];
+        boolean alreadyVisitedVertex[] = new boolean[noOfVerticex];
 
         for (int i = 0; i < noOfVerticex; i++) {
             distance[i] = Integer.MAX_VALUE;
-            set[i] = false;
+            alreadyVisitedVertex[i] = false;
         }
         distance[source] = 0;
         /*
@@ -44,9 +44,9 @@ public class Dijkstra1 {
             /*
             Picking the minimum distance vertex among the non visited vertex
              */
-            int u = findMinimum(set, distance);
+            int u = findMinimum(alreadyVisitedVertex, distance);
 
-            set[u] = true;
+            alreadyVisitedVertex[u] = true;
 
             for (int j = 0; j < noOfVerticex; j++) {
                 if (graph[u][j] != 0 && distance[u] != Integer.MAX_VALUE && distance[j] > distance[u] + graph[u][j]) {
@@ -57,13 +57,13 @@ public class Dijkstra1 {
         printDistances(distance);
     }
 
-    private int findMinimum(boolean set[], int distance[]) {
+    private int findMinimum(boolean alreadyVisitedVertex[], int distance[]) {
 
-        int n = set.length;
+        int n = alreadyVisitedVertex.length;
         int minIndex = 0;
         int minDis = Integer.MAX_VALUE;
         for (int i = 0; i < n; i++) {
-            if (!set[i]) {
+            if (!alreadyVisitedVertex[i]) {
                 if (distance[i] < minDis) {
                     minDis = distance[i];
                     minIndex = i;

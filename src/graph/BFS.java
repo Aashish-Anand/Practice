@@ -61,12 +61,12 @@ public class BFS {
 
         for(int i = 0;i<noOfVertices;i++) {
             if(!visited[i]) {
-                printDFS(i,visited);
+                printBFS(i,visited);
             }
         }
     }
 
-    private void printDFS(int v, boolean visited[]) {
+    private void printBFS(int v, boolean visited[]) {
 
         Queue<Integer> queue = new LinkedList<>();
 
