@@ -15,7 +15,7 @@ public class DetectLoopInLinkedList {
 		}
 		System.out.println(slow.data);
 		System.out.println(fast.data);
-		System.out.println("LinkedList detected.");
+		System.out.println("Loop detected.");
 		
 		System.out.println("Length of loop LL :");
 		slow = slow.next;
