@@ -19,6 +19,8 @@ public class SetCheck {
 		//System.out.print(set.size());
 		
 		System.out.println((char)('a'+1));
+
+		System.out.println(5/2);
 	}
 
 }
