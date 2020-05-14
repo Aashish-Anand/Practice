@@ -96,7 +96,7 @@ public class D642 {
                             map.put(newDiff, pq);
                         }
                     }
-                    break;  // we are breaking as we have update the map 
+                    break;  // we are breaking as we have update the map
                 }
                 if (i == n + 1) {
                     break;
