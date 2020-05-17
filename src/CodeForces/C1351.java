@@ -28,7 +28,7 @@ public class C1351 {
             int curr_x = 0;
             int curr_y = 0;
             int new_x=0, new_y=0;
-            
+
             while(i<n) {
 
                 char ch = s.charAt(i);
