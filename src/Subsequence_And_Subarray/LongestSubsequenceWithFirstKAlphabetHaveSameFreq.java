@@ -8,7 +8,7 @@ public class LongestSubsequenceWithFirstKAlphabetHaveSameFreq {
     private void run() {
         String str = "ACAABCCAB";
         int n = str.length();
-        int k = 4;
+        int k = 3;
         System.out.print(findlen(str, n, k));
     }
 

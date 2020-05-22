@@ -14,7 +14,7 @@ public class GenerateAllSubArray {
         for(int i = 0;i<n;i++) {
             for(int j = i+1;j<n;j++) {
                 String s = str.substring(i,j);
-                System.out.println(s);
+                //System.out.println(s);
                 list.add(s);
             }
         }
