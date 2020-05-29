@@ -28,16 +28,16 @@ public class C1359 {
     }
 }
 
-    ld sg(ll p,ll q,ll n){
-        return ((ld)p*(n+1)+q*n)/(2*n+1);
-    }
-
-    void solve(){
-        cin>>p>>q>>h;
-        if(p+q>=2*h)cout<<2<<el;
-        else{
-            z=(p-h)/(2*h-p-q);
-            if(abs(sg(p,q,z)-h)>abs(sg(p,q,z+1)-h))cout<<2*z+3<<el;
-            else cout<<2*z+1<<el;
-        }
-    }
+//    ld sg(ll p,ll q,ll n){
+//        return ((ld)p*(n+1)+q*n)/(2*n+1);
+//    }
+//
+//    void solve(){
+//        cin>>p>>q>>h;
+//        if(p+q>=2*h)cout<<2<<el;
+//        else{
+//            z=(p-h)/(2*h-p-q);
+//            if(abs(sg(p,q,z)-h)>abs(sg(p,q,z+1)-h))cout<<2*z+3<<el;
+//            else cout<<2*z+1<<el;
+//        }
+//    }
