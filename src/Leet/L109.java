@@ -1,5 +1,8 @@
 package Leet;
 
+import Leet.GenericDataStructure.LinkedList;
+import Leet.GenericDataStructure.Tree;
+
 public class L109 {
     public static void main(String[] args) {
         new L109().run();

@@ -54,7 +54,7 @@ public class L763 {
         int selectedEnd = p.b;
 
 
-        List<Integer> ans = new LinkedList<>();
+        List<Integer> ans = new java.util.LinkedList<>();
         System.out.println(selectedStart+" "+selectedEnd);
         for(pair a: pairList) {
             System.out.println(a.a+" "+a.b);

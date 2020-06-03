@@ -1,5 +1,7 @@
 package Leet;
 
+import Leet.GenericDataStructure.Tree;
+
 public class L1325 {
     public static void main(String[] args) {
         new L1325().run();

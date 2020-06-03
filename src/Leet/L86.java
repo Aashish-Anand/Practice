@@ -1,5 +1,7 @@
 package Leet;
 
+import Leet.GenericDataStructure.LinkedList;
+
 public class L86 {
     public static void main(String[] args) {
         new L86().run();

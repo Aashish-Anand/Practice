@@ -1,5 +1,7 @@
 package Leet;
 
+import Leet.GenericDataStructure.Tree;
+
 import java.util.LinkedList;
 import java.util.Queue;
 

@@ -1,13 +1,13 @@
-package Leet;
+package Leet.GenericDataStructure;
 
 public class Tree {
-    int data;
-    Tree left, right;
+    public int data;
+    public Tree left, right;
 
-    Tree() {
+    public Tree() {
 
     }
-    Tree(int data) {
+    public Tree(int data) {
         this.data = data;
         left = right = null;
     }

@@ -1,18 +1,18 @@
-package Leet;
+package Leet.GenericDataStructure;
 
 public class LinkedList {
-    int data;
-    LinkedList next;
+    public int data;
+    public LinkedList next;
 
-    LinkedList() {
+    public LinkedList() {
 
     }
-    LinkedList(int data){
+    public LinkedList(int data){
         this.data = data;
         this.next = null;
     }
 
-    void add(LinkedList head, LinkedList node) {
+    public void add(LinkedList head, LinkedList node) {
         while(head.next!=null) {
             head = head.next;
         }
@@ -20,7 +20,7 @@ public class LinkedList {
         head.next = node;
     }
 
-    void printList(LinkedList head){
+    public void printList(LinkedList head){
         while(head!=null) {
             System.out.print(head.data+" ");
             head = head.next;
