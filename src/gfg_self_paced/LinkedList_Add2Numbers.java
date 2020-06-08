@@ -69,7 +69,7 @@ public class LinkedList_Add2Numbers {
         addEqualParts(temp1, temp2);
 
         //head1.print(temp1);  // working fine
-        if (head1 != temp1) {
+        if (len1 != len2) {
             addRemainingPart(head1, temp1);
         }
 
