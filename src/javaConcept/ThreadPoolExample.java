@@ -1,6 +1,5 @@
 package javaConcept;
 
-import java.util.concurrent.Executor;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
@@ -36,7 +35,8 @@ public class ThreadPoolExample {
             ex.execute(worker);
         }
         ex.shutdown();
-        while(!ex.isTerminated()) {}
+        while (!ex.isTerminated()) {
+        }
         System.out.println("Finished all threads");
     }
 }
