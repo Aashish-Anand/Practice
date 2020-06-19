@@ -1,6 +1,10 @@
 package practice;
 
+import java.lang.reflect.Array;
+import java.util.Arrays;
+import java.util.HashSet;
 import java.util.Scanner;
+import java.util.Set;
 
 public class TestClass {
     public static void main(String[] args) {
@@ -21,6 +25,12 @@ public class TestClass {
                 System.out.print(a+ " ");
             }
         }
+
+        int arr[] = {1,2,2};
+        char c = 'a';
+        System.out.println("aashos" +(c-'!'));
+        String ans  = Integer.toString(2);
+        System.out.println(ans);
     }
 
     private void run() {
