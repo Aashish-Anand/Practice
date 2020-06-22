@@ -6,7 +6,7 @@ public class GenerateAllSubSequence {
     }
 
     private void run() {
-        int arr[] = {1, 2, 3, 4};
+        int arr[] = {1, 2, 3};
         int n = arr.length;
 
         findAllSubs(arr,n);
