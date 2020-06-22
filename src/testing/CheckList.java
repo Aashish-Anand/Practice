@@ -1,7 +1,6 @@
 package testing;
 
 import java.util.LinkedList;
-import java.util.Queue;
 
 public class CheckList {
 
@@ -19,6 +18,10 @@ public class CheckList {
 		for(int a: arr) {
 			System.out.println(a);
 		}
+
+		Object[] a =arr.toArray();
+
+
 	}
 
 }
