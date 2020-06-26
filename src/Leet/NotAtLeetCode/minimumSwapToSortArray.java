@@ -1,9 +1,14 @@
-package Leet;
+package Leet.NotAtLeetCode;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 
+/**
+ * https://www.geeksforgeeks.org/minimum-number-swaps-required-sort-array/
+ * https://www.geeksforgeeks.org/minimum-swap-required-convert-binary-tree-binary-search-tree/
+ *
+ */
 class pair1 {
     int value;
     int index;
@@ -12,6 +17,7 @@ class pair1 {
         this.index = index;
     }
 }
+
 
 public class minimumSwapToSortArray {
     public static void main(String[] args) {
@@ -23,6 +29,9 @@ public class minimumSwapToSortArray {
         System.out.println(findSwaps(arr));
     }
     private int findSwaps(int arr[]) {
+        /*
+        First we storing the array element and its corresponding index in a list
+         */
         ArrayList<pair1> list = new ArrayList<>();
 
         int n = arr.length;
@@ -30,6 +39,9 @@ public class minimumSwapToSortArray {
             list.add(new pair1(arr[i],i));
         }
 
+        /*
+        We sort the list according to the array value
+         */
         Collections.sort(list, new Comparator<pair1>() {
             @Override
             public int compare(pair1 o1, pair1 o2) {
@@ -44,6 +56,13 @@ public class minimumSwapToSortArray {
         });
 
 //        list.forEach(a-> System.out.println(a.value));
+
+        /*
+        After sorting the we check each index if it is visited or not
+        if visited that means we already traverse the index and it is considered a part of swap
+        if not visited then we take the index and find the element store at that index using our list
+        after that we take the index of the element and do the same thing until we fina a visited index
+         */
         boolean visited[] = new boolean[n];
         int ans = 0;
         for(int i = 0;i<n;i++) {

@@ -1,4 +1,4 @@
-package Leet;
+package Leet.NotAtLeetCode;
 
 public class StockBuyAndSell {
 
