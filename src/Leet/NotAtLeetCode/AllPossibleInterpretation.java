@@ -1,7 +1,5 @@
 package Leet.NotAtLeetCode;
 
-import linkedList.LinkedList;
-
 import java.util.Arrays;
 
 class StringTree {
