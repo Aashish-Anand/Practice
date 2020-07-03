@@ -72,11 +72,11 @@ public class ListToMap {
         map.entrySet().forEach(System.out::println);
 
         // what if there are duplicates
-        Map result = users.stream()
-                .sorted(Comparator.comparingLong(User::getId).reversed())
-                .collect(Collectors.toMap(User::getName, User::getLastName,
-                        (oldValue, newValue)->oldValue, LinkedHashMap::new));
-        System.out.println(result);
+//        Map result = users.stream()
+//                .sorted(Comparator.comparingLong(User::getId).reversed())
+//                .collect(Collectors.toMap(User::getName, User::getLastName,
+//                        (oldValue, newValue)->oldValue, LinkedHashMap::new));
+//        System.out.println(result);
     }
 
 

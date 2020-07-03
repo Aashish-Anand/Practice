@@ -2,7 +2,7 @@ package javaConcept;
 
 abstract class Abstract1 {
 	
-	abstract void method1();  // this is the abstract method
+	abstract void method2();  // this is the abstract method
 	void method() {
 
 	}
@@ -12,11 +12,11 @@ abstract class Abstract2 extends Abstract1{
 	
 
 	abstract void method1();
-//	@Override
-//	public void method1() {
-//		System.out.print("Override Abstract method of Class Abstract1 in Class Abstract2");
-//
-//	}
+	@Override
+	public void method2() {
+		System.out.print("Override Abstract method of Class Abstract1 in Class Abstract2");
+
+	}
 	
 }
 class Abstract3 extends Abstract2 {
@@ -44,7 +44,7 @@ public class AbstractClasses {
 	public static void main(String []args) {
 		
 		Abstract1 abs = new Abstract3();
-		abs.method1();
+		//abs.method1();
 		abs.method();
 		
 	}

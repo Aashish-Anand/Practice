@@ -8,7 +8,7 @@ interface A {
 }
 abstract class B implements A {
     public void b(){
-        System.out.println("Implementing the A method in abstract class");
+        System.out.println("Implementing the B method in abstract class");
     }
     public abstract void abs();
     public void nonabs() {
@@ -24,8 +24,13 @@ class M extends B {
     }
 
     @Override
+    public void b() {
+        System.out.println("Implementing the b method in child");
+    }
+
+    @Override
     public void c() {
-        System.out.println("Implementing the b method");
+        System.out.println("Implementing the c method");
     }
 
     @Override
@@ -51,6 +56,7 @@ public class AbstractExample{
         B b = new M();
         b.abs();
         b.a();
+        b.b();
         b.c();
         b.d();
         b.nonabs();

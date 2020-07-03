@@ -28,6 +28,7 @@ public class L127_2 {
 
         System.out.println(ladderLength(beginWord, endWord, list));
     }
+    
     public int ladderLength(String beginWord, String endWord, List<String> wordList) {
 
         // queue to store the current word
