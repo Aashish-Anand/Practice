@@ -22,6 +22,11 @@ public class Sysout {
         char ch[] = a.toCharArray();
         Arrays.sort(ch);
         System.out.println(String.valueOf(ch));
+        System.out.println();
+        String anss = "abc";
+        System.out.println(anss);
+        anss = "adaacdad";
+        System.out.println(anss);
 
     }
     /* Here is a comment **** */
