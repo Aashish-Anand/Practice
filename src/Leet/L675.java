@@ -187,6 +187,8 @@ public class L675 {
 
         int n = forests.size();
         int m = forests.get(0).size();
+
+        // this list will contains all the tree indexes and the value of that tree
         List<element> ll = new ArrayList<>();
         for(int i = 0;i<n;i++) {
             for(int j = 0;j<m;j++) {
@@ -196,6 +198,7 @@ public class L675 {
                 }
             }
         }
+        // sort the list wrt. the tree value as we need to cut smallest tree first
         Collections.sort(ll, Comparator.comparingInt(element::getDist));
 //        for(int i = 0;i<ll.size();i++){
 //            System.out.print(ll.get(i).getDist()+" ");
@@ -204,6 +207,10 @@ public class L675 {
         int sourcex = 0;
         int sourcey = 0;
 
+        /**
+         * here first we will find the distance of first tree from (0,0) once found
+         * then we will find the second tree distance from first tree and so on.
+         */
         for(element e : ll) {
             int distance = findDist(forests, sourcex, sourcey, e.getX(), e.getY());
             if(distance < 0){

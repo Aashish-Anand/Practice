@@ -4,6 +4,30 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Set;
 
+/**
+ * This is just an amazing question.
+ * It has 2 solution
+ * 1. Dfs but time limit exceed :
+ *    in this solution you will first make any zero to one then find max area and you have to do it in the same way
+ *
+ * 2. Coloring Solution by ME:
+ *    In this solution we first traverse the whole matrix and color each island with diffrent color
+ *    eg if we have 0,0,1,1
+ *                  0,0,1,1
+ *                  1,1,0,0
+ *                  1,1,0,0
+ *    then it will be look like  0,0,10,10
+ *                               0,0,10,10
+ *                               20,20,0,0
+ *                               20,20,0,0
+ *    number other than 0 and 1 is color; also stores the area associated with it i.e 10 has 4 and 20 has 4 area size.
+ *
+ *    Now what we can do is, for every zero - check all its adjacent i.e up, down, right, left and if they are colored
+ *    then just find add the area and side by side check the area with max area.
+ *
+ *    at the end return the max area as answer;
+ *
+ */
 public class L827 {
     public static void main(String[] args) {
         new L827().run();
