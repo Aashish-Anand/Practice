@@ -53,4 +53,20 @@ public class L114 {
 
     }
 
+    private void flatten1(Tree root) {
+        if(root == null){
+            return;
+        }
+        if(root.left!=null) {
+            flatten1(root.left);
+        }
+        if(root.right!=null) {
+            Tree node = root;
+            for(;node.left!=null;node = node.left);
+            flatten(root.right);
+            node.left = root.right;
+            root.right = null;
+        }
+    }
+
 }

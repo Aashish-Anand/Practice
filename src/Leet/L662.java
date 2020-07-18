@@ -5,6 +5,20 @@ import Leet.GenericDataStructure.Tree;
 import java.util.LinkedList;
 import java.util.Queue;
 
+/**
+ * What I have done is, as you know in a complete binary tree there are 2*n number of nodes where n is level
+ *
+ * Now in laymen what i did is just find what is the position of the each node at each level
+ *
+ * let have an example at level 2 we have 4 node i.e [30,20,null,10] , position of node are as follows
+ * 30: position1
+ * 20: position2
+ * null: we wont considered
+ * 10: position4
+ *
+ * so max width at this level is position4 - position1 i.e 3
+ * this is what i done here;
+ */
 public class L662 {
     public static void main(String[] args) {
         new L662().run();
@@ -52,9 +66,12 @@ public class L662 {
             }
             else {
                 if(first == -1) {
+                    // this is to find the first element in a particular level
                     first = e.position;
                 }
                 else {
+                    // this to find the last element in a particular level and also check the
+                    // maximum distance between the first node and last node at a level
                     last = e.position;
                     max = Math.max(max, last-first+1);
                 }

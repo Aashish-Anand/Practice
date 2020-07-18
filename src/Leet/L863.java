@@ -45,7 +45,7 @@ public class L863 {
 
     private int distanceKUtil(Tree root, Tree target, int k){
         if(root == null){
-            //cornor case : if tree is null;
+            //corner case : if tree is null
             return -1;
         }
 
