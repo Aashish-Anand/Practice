@@ -17,6 +17,7 @@ public class InOrderIterative {
         v.root.left.right = new TreeNode(5);
         v.root.right.left = new TreeNode(6);
         v.root.right.right = new TreeNode(7);
+        v.root.right.right.left = new TreeNode(8);
 
         printInOrder2(v.root);
     }
