@@ -61,7 +61,7 @@ public class minimumSwapToSortArray {
         After sorting the we check each index if it is visited or not
         if visited that means we already traverse the index and it is considered a part of swap
         if not visited then we take the index and find the element store at that index using our list
-        after that we take the index of the element and do the same thing until we fina a visited index
+        after that we take the index of the element and do the same thing until we find a visited index
          */
         boolean visited[] = new boolean[n];
         int ans = 0;
