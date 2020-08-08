@@ -1,7 +1,7 @@
 package graph;
 
 /**
- * Dijsktra using the Adjacency Matrix
+ * Dijkstra using the Adjacency Matrix
  */
 
 public class Dijkstra1 {

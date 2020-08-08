@@ -3,6 +3,9 @@ package graph;
 import java.util.Arrays;
 import java.util.List;
 
+/**
+ * Single Source Shortest Path
+ */
 class Edge {
     int source;
     int destination;

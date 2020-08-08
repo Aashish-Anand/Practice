@@ -59,6 +59,8 @@ public class BFS {
 
         //visited[source] = true;
 
+        // this for loop is used because there may be disconnected components , so to cover them
+        // all we used this.
         for(int i = 0;i<noOfVertices;i++) {
             if(!visited[i]) {
                 printBFS(i,visited);

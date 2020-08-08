@@ -1,6 +1,7 @@
 package graph;
 
 /**
+ * All Pair shortest path
  * Tutorial I Followed : https://www.techiedelight.com/pairs-shortest-paths-floyd-warshall-algorithm/
  */
 public class FloydWarshell {
