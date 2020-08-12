@@ -73,16 +73,15 @@ public class L1345 {
 
                 LinkedList<Integer> l = map.get(arr[j.index]);
                 if(null!=l ) {
-                        Collections.reverse(l);
-                        int index = l.removeFirst();
+                    Collections.reverse(l);
 
-                        for (Integer a : l) {
-                            if (!traversed[a]) {
-                                traversed[a] = true;
-                                q.add(new Jumps(a, j.jump + 1));
-                            }
+                    for (Integer a : l) {
+                        if (!traversed[a]) {
+                            traversed[a] = true;
+                            q.add(new Jumps(a, j.jump + 1));
                         }
-                        map.put(arr[j.index], new LinkedList<>());
+                    }
+                    map.put(arr[j.index], new LinkedList<>());
                 }
             }
         }

@@ -223,29 +223,29 @@ public class L675 {
         return ans;
     }
 
-    private int findDist(List<List<Integer>> forest, int sourcex, int sourcey, int destinationx,
-                         int destinationy) {
+    private int findDist(List<List<Integer>> forest, int sourceX, int sourceY, int destinationX,
+                         int destinationY) {
 
         int nextX[] = {-1,1,0,0};
         int nextY[] = {0,0,-1,1};
         Queue<element> q = new LinkedList<>();
-        q.add(new element(sourcex,sourcey,0));
+        q.add(new element(sourceX,sourceY,0));
         int n = forest.size();
         int m = forest.get(0).size();
 
         boolean visited[][]  = new boolean[n][m];
-        visited[sourcex][sourcey] = true;
+        visited[sourceX][sourceY] = true;
         while(!q.isEmpty()){
             element e = q.poll();
-            if(e.getX() == destinationx && e.getY() == destinationy){
+            if(e.getX() == destinationX && e.getY() == destinationY){
                 return e.getDist();
             }
             for(int i = 0;i<4;i++) {
-                int newx = e.getX()+ nextX[i];
-                int newy = e.getY() + nextY[i];
-                if(isSafe(newx,newy, n,m) && !visited[newx][newy] && forest.get(newx).get(newy)>0){
-                    visited[newx][newy] = true;
-                    q.add(new element(newx,newy, e.getDist()+1));
+                int newX = e.getX()+ nextX[i];
+                int newY = e.getY() + nextY[i];
+                if(isSafe(newX,newY, n,m) && !visited[newX][newY] && forest.get(newX).get(newY)>0){
+                    visited[newX][newY] = true;
+                    q.add(new element(newX,newY, e.getDist()+1));
                 }
             }
         }

@@ -8,10 +8,10 @@ import java.util.Set;
  * This is just an amazing question.
  * It has 2 solution
  * 1. Dfs but time limit exceed :
- *    in this solution you will first make any zero to one then find max area and you have to do it in the same way
+ *    in this solution you will first make any zero to one then find max area and you have to it for every zero
  *
  * 2. Coloring Solution by ME:
- *    In this solution we first traverse the whole matrix and color each island with diffrent color
+ *    In this solution we first traverse the whole matrix and color each island with different color
  *    eg if we have 0,0,1,1
  *                  0,0,1,1
  *                  1,1,0,0

@@ -35,7 +35,7 @@ public class L863 {
 
         for step 2 we have to check what is the distance of ancestor
             a. if distance between ancestor and target node is 0 then print it
-            b. if distance is greater than 0 then we have to traverse the right subtree of ancestor also;
+            b. if distance is greater than 0 then we have to traverse the adjacent subtree of ancestor also;
          */
 
         distanceKUtil(root, target, k);
