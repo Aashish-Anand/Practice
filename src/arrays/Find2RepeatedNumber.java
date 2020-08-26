@@ -37,7 +37,7 @@ public class Find2RepeatedNumber {
 				Y = Y ^ i;
 			}
 		}
-		System.out.print(X + " " + Y);
+		System.out.print(X + " " + Y); 
 	}
 	
 	public static void main(String[] args) {

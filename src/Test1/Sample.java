@@ -14,5 +14,23 @@ public class Sample {
         for(Integer a : list){
             System.out.println(a);
         }
+
+
+        b bbb = new b();
+        System.out.println(bbb.i);
     }
+
+    class A {
+        int i = 0;
+        A() {
+            i = 1;
+        }
+    }
+    class b extends A {
+        public b() {
+            i = 2;
+        }
+    }
+
+
 }
