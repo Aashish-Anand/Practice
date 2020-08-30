@@ -1,0 +1,16 @@
+Terminal Operation
+    1. forEach
+    2. average
+    3. count
+    4. max
+    5. min
+    6. reduce
+
+    from 2 to 6 they will return only single value as they are reducing operations
+
+Intermediate Operation
+    1. filter
+    2. distinct
+    3. limit
+    4. map
+    5. sorted

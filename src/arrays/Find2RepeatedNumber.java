@@ -1,5 +1,7 @@
 package arrays;
 
+import java.util.Scanner;
+
 public class Find2RepeatedNumber {
 
 	public static void print2Numbers(int a[], int n) {
@@ -47,6 +49,12 @@ public class Find2RepeatedNumber {
 		String abc = "abcde";
 		System.out.println(abc.substring(0,abc.length()-1));
 		print2Numbers(a,n);
+
+		System.out.println();
+		Scanner sc = new Scanner(System.in);
+		String abcd = sc.nextLine();
+		String defg = sc.next();
+		System.out.println(abcd+" "+defg);
 	}
 
 }
